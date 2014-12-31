@@ -1,0 +1,30 @@
+Wed Dec 31 2014 04:49:50 GMT-0600 (CST):
+{ [Error: Unable to locate site named joelcox(joelcox)]
+  stack: [Getter/Setter],
+  __frame: 
+   { name: 'lookupSiteNameAndWebSpace__19',
+     line: 841,
+     file: '/usr/local/lib/node_modules/azure-cli/lib/commands/asm/websites/websitesclient._js',
+     prev: 
+      { name: 'ensureRepositoryUri__16',
+        line: 770,
+        file: '/usr/local/lib/node_modules/azure-cli/lib/commands/asm/websites/websitesclient._js',
+        prev: [Object],
+        active: false,
+        offset: 3,
+        col: 19 },
+     active: false,
+     offset: 12,
+     col: 4 },
+  rawStack: [Getter] }
+Error: Unable to locate site named joelcox(joelcox)
+    at ___ (/usr/local/lib/node_modules/azure-cli/lib/commands/asm/websites/websitesclient._js:837:20)
+    at ___ (/usr/local/lib/node_modules/azure-cli/node_modules/streamline/lib/callbacks/runtime.js:85:13)
+    at ___ (/usr/local/lib/node_modules/azure-cli/lib/commands/asm/websites/websitesclient._js:473:131)
+    at __tryCatch (/usr/local/lib/node_modules/azure-cli/node_modules/streamline/lib/callbacks/runtime.js:141:4)
+    at ___ (/usr/local/lib/node_modules/azure-cli/lib/commands/asm/websites/websitesclient._js:473:67)
+    at getSites__7 (/usr/local/lib/node_modules/azure-cli/lib/commands/asm/websites/websitesclient._js:473:33)
+    at lookupSiteNameAndWebSpace__19 (/usr/local/lib/node_modules/azure-cli/lib/commands/asm/websites/websitesclient._js:853:4)
+    at ensureRepositoryUri__16 (/usr/local/lib/node_modules/azure-cli/lib/commands/asm/websites/websitesclient._js:773:19)
+    at __2 (/usr/local/lib/node_modules/azure-cli/lib/commands/asm/site.log._js:94:26)
+

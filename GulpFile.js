@@ -25,9 +25,18 @@ gulp
     .task('watch', startWatch)
 
 gulp
+  .task('dist', $.sequence('build:dist'))
+
+gulp
     .task('build', $.sequence('styles', 'inject', 'bower'))
     .task('styles', styles)
     .task('inject', startInject)
+    .task('bower', bower)
+
+gulp
+    .task('build:dist', $.sequence('styles:dist', 'inject:dist', 'bower'))
+    .task('styles:dist', stylesDist)
+    .task('inject:dist', startInjectDist)
     .task('bower', bower)
 
 
@@ -55,6 +64,12 @@ function styles(){
     .pipe( $.concat('app.css') )
     .pipe( gulp.dest(tmp.root) );
 }
+function stylesDist(){
+  return gulp.src( paths.stylus )
+    .pipe( $.stylus() )
+    .pipe( $.concat('app.css') )
+    .pipe( gulp.dest(paths.stylePath) );
+}
 
 function startInject(){
   var target  = gulp.src( paths.index );
@@ -64,6 +79,17 @@ function startInject(){
   return target
     .pipe( $.inject( scripts,  {relative:true}) )
     .pipe( $.inject( styles,  {relative:false, ignorePath:'.tmp'}) )
+    .pipe( gulp.dest( paths.root ) );
+}
+
+function startInjectDist(){
+  var target  = gulp.src( paths.index );
+  var scripts = gulp.src( paths.scripts, {read:false} );
+  var styles  = gulp.src( paths.styles, {read:false} );
+
+  return target
+    .pipe( $.inject( scripts,  {relative:true}) )
+    .pipe( $.inject( styles,   {relative:true}) )
     .pipe( gulp.dest( paths.root ) );
 }
 
