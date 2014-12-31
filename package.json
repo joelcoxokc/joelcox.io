@@ -25,6 +25,9 @@
     "node": ">= 0.10.26"
   },
   "scripts": {
+    "init": "npm install",
+    "install": "bower install",
+    "start": "node server/index.js",
     "test": "gulp test"
   },
   "dependencies": {

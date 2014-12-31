@@ -18,7 +18,7 @@ var _       = require('lodash'),
 ///     @NODE_ENV        development
 ///     @process.env     set node environment
 ///
-process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+process.env.NODE_ENV = process.env.NODE_ENV || 'production';
 
 
 ///////////////////////////////
