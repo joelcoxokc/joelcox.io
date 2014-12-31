@@ -34,7 +34,6 @@
     "body-parser": "^1.10.0",
     "boganipsum": "^0.1.0",
     "colors": "^1.0.3",
-    "connect-livereload": "^0.5.0",
     "express": "^4.9.7",
     "lodash": "^2.4.1",
     "method-override": "^2.3.0",
@@ -42,6 +41,7 @@
     "prettyjson": "^1.0.0"
   },
   "devDependencies": {
+    "connect-livereload": "^0.5.0",
     "chai": "^1.10.0",
     "expect.js": "^0.3.1",
     "gulp": "~3.5.0",
