@@ -1,0 +1,22 @@
+<mv-vm title='Messages'>
+    <vm-item has-border=true data-ng-repeat="item in vm.messages" ng-model='item'>
+      <vm-item-heading
+          ng-mouseenter="content = (item.text | limitTo:'50')"
+          ng-mouseleave="content = (item.text | limitTo:'100')">
+        <vm-item-left>
+          <span class="icon-circle blue lighten-2"></span>
+          {{item.title}}
+        </vm-item-left>
+        <vm-item-center>{{content || item.text | limitTo:100}}...</vm-item-center>
+        <vm-item-tools>
+          <i class="mdi-content-create"></i>
+          <i class="mdi-action-schedule"></i>
+          <i class="mdi-action-done"></i>
+          <i class="mdi-navigation-more-vert"></i>
+        </vm-item-tools>
+      </vm-item-heading>
+      <vm-item-content>
+        <p>{{item.text}}</p>
+      </vm-item-content>
+    </vm-item>
+</mv-vm>

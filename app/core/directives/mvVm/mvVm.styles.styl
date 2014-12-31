@@ -1,0 +1,73 @@
+$box-0-4-6  =  0px 4px 6px rgba(0,0,0,.3)
+$box-2-4-6  =  4px 6px 10px rgba(0,0,0,.19)
+
+animation(val)
+  -webkit-animation: val
+  -moz-animation: val
+  animation: val
+
+fill-mode(val)
+  -webkit-animation-fill-mode: val /* Chrome, Safari, Opera */
+  animation-fill-mode: val
+
+animation-direction(val)
+  -webkit-animation-direction: val; /* Chrome, Safari, Opera */
+  animation-direction: val;
+
+transform(val)
+  -webkit-transform:val
+  transform:val
+
+border-radius(val)
+  border-radius val
+  -webkit-border-radius val
+
+box-shadow(val)
+  box-shadow val
+  -webkit-box-shadow val
+  -moz-box-shadow val
+
+keyframes(name)
+  @-webkit-keyFrames {name}
+    block
+  @-moz-keyFrames {name}
+    block
+  @-keyFrames {name}
+    block
+
+
+block-defaults()
+  background #2196F3
+  display block
+  position relative
+  color white
+  font-size 3.5em
+  font-weight 700
+  // float left
+
+mvvm-initial()
+  border 0px solid white
+  opacity 1
+  border-radius(0)
+
+
+.mv-vm
+  text-align center
+  max-height 100%
+  min-width 100%
+  position absolute
+  display-box()
+  display block
+
+  > .vm-block
+    block-defaults()
+
+    height 0
+    width 0
+    text-align center
+    // margin 0 auto
+    top 100px
+    left 100px
+    border-radius(100%)
+    opacity 0
+    line-height 100px

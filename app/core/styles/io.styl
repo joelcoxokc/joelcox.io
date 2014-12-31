@@ -1,0 +1,348 @@
+$color-primary = black
+$shadow-small = 0px 2px 4px rgba(0,0,0,.2)
+
+
+center-flex(values, justify=center, align=center)
+  flex-container()
+  flex-element(values)
+  justify-content(justify)
+  align-items(align)
+
+blockquote
+  border-color lightgrey
+  center-flex(1 0 auto)
+  .b-icon
+    flex-element(0 0 50px)
+  .b-text
+    flex-element(1 0 auto)
+
+.io-background
+  background-image url('bg-2.jpg')
+  background-position center top
+  background-size cover
+  -webkit-filter blur(10px)
+  filter blur(10px)
+  flex-element(1 0 auto)
+  min-height 100%
+  min-width 100%
+  position absolute
+  z-index 1
+
+.io-site
+  z-index 2
+  background-color rgba(255,255,255,.8)
+  flex-container()
+  flex-direction(row)
+  // justify-content(center)
+  // align-items(center)
+  min-height:100%
+  min-width:100%
+  width 100%
+  height 100%
+  position relative
+
+.io-nav
+  z-index 3
+  position relative
+  flex-container()
+  max-height 100%
+  flex-element(0 0 250px)
+  height 100%
+  box-shadow(4px 0px 6px rgba(0,0,0,.1))
+  // border-right 1px solid black
+  left 0
+  top 0
+
+  .io-nav-inner
+    flex-container()
+    flex-element(1 0 auto)
+    flex-direction(column)
+    // box-shadow(4px 0px 6px rgba(0,0,0,.1))
+    position relative
+    top 0
+    left 0
+    // background white
+
+    .io-nav-header
+      center-flex(1 0 auto)
+      flex-direction(column)
+      width 100%
+      max-height 250px
+      border-bottom 1px solid $lightgrey
+
+      .io-nav-title
+
+        padding-top 25px
+        padding-bottom 25px
+        // center-flex(0 0 100px)
+        .userIcon
+          center-flex(0 0 100px)
+          border-radius(100%)
+          box-shadow($shadow-small)
+          width 100px
+          height 100px
+          background white
+          i
+            font-size 4rem
+
+
+      .io-nav-text
+        center-flex(1 0 auto, center)
+        width 100%
+        flex-direction(column)
+        .io-nav-header-name
+          text-align right
+          font-weight 100
+          font-size 3rem
+          width 80%
+          strong
+            font-weight 700
+
+
+        .io-nav-header-email
+          font-size 12px
+          text-align right
+          width 80%
+
+
+
+    .io-navigation
+      flex-container()
+      flex-element(1 0 auto)
+      flex-direction(column)
+      margin-top 10px
+      background white
+      // width 0
+
+      .io-navigation-item
+        flex-container()
+        flex-direction(row)
+        width 100%
+        padding 4px 0 4px 24px
+        cursor pointer
+        &.active,
+        &:active,
+        &:hover
+          background rgba(0,0,0,.03)
+
+        i
+          line-height 40px
+          max-height 40px
+
+
+
+      .io-navigation-item-text
+        flex-container()
+        flex-element(1 0 auto)
+        align-items(center)
+        padding-left 24px
+        font-weight 700
+
+.io-container
+
+  flex-element(1 0 auto)
+  width calc(100% - 250px)
+  height 100%
+  margin 0 auto
+  position relative
+  overflow-y scroll
+  overflow-x hidden
+
+  .io-title
+    flex-container()
+    align-items(center)
+    justify-content(center)
+    position absolute
+    top 0
+    width 100%
+    height 100%
+
+    h1
+      flex-container()
+      align-items(center)
+      justify-content(center)
+      border-radius(5px)
+      box-shadow(0 4px 6px rgba(0,0,0,.4))
+      background white
+      width 30%
+      height 200px
+      margin 0
+      padding 0
+
+.io-content
+  z-index 2
+  min-height 100%
+  position relative
+
+  flex-container()
+  flex-element(1 0 auto)
+  flex-direction(column)
+
+  .io-content-header
+    flex-element(1 0 auto)
+    flex-container()
+    align-items(flex-end)
+    background-color white
+    max-height 250px
+    padding-left 50px
+    padding-bottom 30px
+    // border-bottom 1px solid lightgrey
+    box-shadow($shadow-small)
+    height 300px
+    margin-bottom 50px
+
+.io-section
+  flex-container()
+  flex-element(1 0 auto)
+  flex-direction(column)
+  flex-wrap(nowrap)
+
+  // padding 10px 10px 10px 50px
+  padding-left 50px
+  margin-bottom 50px
+
+
+  .io-section-heading
+    flex-container()
+    align-items(center)
+    justify-content(center)
+    flex-element(1 0 auto)
+    position relative
+    max-height 100px
+    margin 0
+    padding 0
+
+    &.items-left
+      align-items(flex-start)
+      justify-content(flex-start)
+      text-align left
+
+    img
+      margin-right 30px
+      &:not('.no-flex')
+        flex-element(0 0 60px)
+    h3, h4, h5
+      margin 0
+      padding-right 30px
+      border-right 2px solid grey
+
+    .sub
+      padding-left 30px
+      font-size 1.2rem
+      font-weight 700
+      flex-element(2 0 auto)
+
+    .date
+      flex-element(1 0 auto)
+      font-size 2rem
+      font-weight 700
+      text-align right
+      margin-right 30px
+
+  .io-section-content
+    border-bottom 2px solid lightgrey
+
+  .io-section-card
+    flex-container()
+    flex-direction(column)
+    flex-element(1 0 auto)
+    box-shadow($shadow-small)
+    width 100%
+    background-color white
+    margin-bottom 40px
+
+    .io-section-card-heading
+      padding-left 20px
+      padding-top 10px
+      width 100%
+      min-height 48px
+      max-height 48px
+      font-weight 700px
+      font-size 2rem
+      font-weight 700
+      color #757575
+      flex-element(0 0 48px)
+      border-bottom 1px solid #dddddd
+
+  .io-section-logos
+    flex-container()
+    flex-direction(row)
+    flex-element(1 0 auto)
+    align-items(center)
+    justify-content(center)
+    margin-bottom 40px
+    width 100%
+    padding 20px
+
+
+    .img-wrap
+      position relative
+      flex-element(1)
+      align-self(stretch)
+      align-items(center)
+      justify-content(center)
+      text-align center
+      max-height 100px
+      padding-bottom 40px
+      h6
+        position absolute
+        width 100%
+        text-align center
+        font-weight 700
+        font-size 1.2rem
+        color #757575 !important
+        bottom 0
+        // align-self(flex-end)
+      img
+        display block
+        margin 0 auto
+        max-width 100px
+        max-height 100px
+        &.top-sm
+          margin-top 10px
+        &.top-md
+          margin-top 20px
+        &.top-lg
+          margin-top 30px
+
+.io-profile
+  justify-content(center)
+
+  .io-profile-header
+    flex-element(1)
+    flex-container()
+    width 100%
+    padding-left 50px
+    max-height 120px
+  .io-profile-details
+    width 100%
+    padding-left 50px
+
+
+
+
+
+
+
+.center-item
+  margin-left 20px
+  flex-container()
+  align-items(center)
+  i
+    margin-right 20px
+    font-size 20px
+
+
+
+
+.progress-list
+  list-style none
+  margin 0
+  padding 0
+  li
+    font-weight 500
+    .list-title
+      font-size 1.2rem
+      font-weight 700
+
+
