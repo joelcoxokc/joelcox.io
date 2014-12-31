@@ -1,0 +1,47 @@
+{
+  "config-y": {
+    "cwd": {
+      "root": "/Users/joelcox/dev/temp/play",
+      "client": "/Users/joelcox/dev/temp/play/client",
+      "app": "/Users/joelcox/dev/temp/play/client/app",
+      "api": "/Users/joelcox/dev/temp/play/server/api",
+      "server": "/Users/joelcox/dev/temp/play/server",
+      "modules": "/Users/joelcox/dev/temp/play/client/app/modules"
+    },
+    "appName": "ASD",
+    "appDescription": "",
+    "appKeywords": "",
+    "appAuthor": "",
+    "script": "js",
+    "httpType": "http",
+    "client": "./client",
+    "app": "./client/app",
+    "modulesPath": "./client/app/modules",
+    "server": "./server",
+    "api": "./server/api",
+    "modules": [
+      "angularCookies",
+      "angularAnimate",
+      "angularTouch",
+      "angularSanitize"
+    ],
+    "app_names": {
+      "single": {
+        "slug": "asd",
+        "camel": "asd",
+        "classed": "Asd",
+        "humanized": "Asd"
+      },
+      "plural": {
+        "slug": "asds",
+        "camel": "asds",
+        "classed": "Asds",
+        "humanized": "Asds"
+      },
+      "slug": "asd"
+    },
+    "js": true,
+    "restangular": false,
+    "http": true
+  }
+}

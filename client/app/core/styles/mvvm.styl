@@ -1,0 +1,157 @@
+// .components
+blockquote
+  margin 0
+
+body
+  position relative
+  min-height 100vh
+  min-width 100vw
+  overflow-x hidden
+
+nav.top-nav
+  margin-bottom 20px
+
+i
+  font-size 30px
+
+  .small
+    font-size 2rem
+  .medium
+    font-size 4rem
+  .large
+    font-size 6rem
+
+.icon-circle
+  // position absolute
+  display block
+  float left
+  height 28px
+  width 28px
+  margin 10px 28px 10px 5px
+  border-radius(100%)
+
+
+
+.noverflow
+  overflow hidden
+
+.vis-hide
+  opacity 0
+  visibility hidden
+
+.shadow-sm
+  shadow-0-2-4()
+
+.vm-item
+  position relative
+  width 100%
+  max-height 48px
+  margin-left auto
+  margin-right auto
+  overflow hidden
+  transition(all 200ms ease-out)
+
+  shadow-0-2-4()
+
+  &:last-child
+    border-bottom none
+
+  &.has-border
+    border-left: 5px solid #EF9A9A;
+
+  &:before
+    content: "";
+    display: table;
+    clear: both;
+
+
+  .vm-item-heading
+    position relative
+    max-height 48px
+    padding-left 1.5rem;
+    // padding-top 10px
+    line-height 48px
+    // padding-bottom 10px
+    cursor pointer
+    .vm-item-tools
+      position absolute
+      background-color white
+      max-height 48px
+      min-height 48px
+      display none
+      color lightgrey
+      right 0
+      top 0
+      i
+        display block
+        float left
+        width 25%
+        text-align center
+        font-size 1.5rem
+        line-height 48px
+        margin 0 auto
+
+
+  .vm-item-content
+    padding-left 1.5rem;
+    padding-right 1.5rem;
+    padding-top 20px
+    max-height 0px
+
+  &:hover
+    .vm-item-tools
+      display block
+
+  &.vm-item-open
+    max-height 600px
+    margin-top 30px
+    margin-bottom 30px
+    box-shadow(0 10px 25px rgba(0,0,0,.1))
+
+    .vm-item-content
+      min-height 200px
+
+  .vm-item-heading-divider
+    width 100%
+    height 1px
+    background-color rgba(0,0,0,.08)
+    position absolute
+    bottom 0
+    left 0
+    &:before
+      content: "";
+      display: table;
+      clear: both;
+
+.container
+  position relative
+  .vm-item
+    // margin-left -0.75rem
+    // margin-right -0.75rem
+
+
+
+.component
+  opacity 0
+  transition(all 200ms ease-out)
+  &.show-component
+    opacity 1
+
+
+.line
+  flex-container()
+  flex-direction(column)
+  justify-content(center)
+  border-radius(100%)
+  position  absolute
+  height 50px
+  width 50px
+  left 50%
+  top 50%
+  margin-top -25px
+  margin-left -25px
+  font-weight 600
+  color white
+  z-index 100
+
+

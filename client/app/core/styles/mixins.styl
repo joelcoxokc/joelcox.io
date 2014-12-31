@@ -1,0 +1,686 @@
+
+widths(w, bool)
+  min-width w
+  max-width w
+  if bool
+    width w
+
+heights(h, bool)
+  min-height h
+  max-height h
+  if bool
+    height h
+
+display-box()
+
+  display: -webkit-box
+  ///* @alternate */
+  display: -moz-box
+  ///* @alternate */
+  display: -ms-box
+  ///* @alternate */
+  display: -o-box
+  ///* @alternate */
+  display: box
+  // display: -webkit-flex
+  // display: -ms-flexbox
+  // display: flex
+
+flex-container() {
+  box-sizing(border-box)
+  display: -webkit-box;           // iOS 6-, Safari 3.1-6
+  display: -moz-box;              // Firefox 19-
+  display: -ms-flexbox;           // IE 10
+  display: -webkit-flex;          // Chrome
+  display: flex;                  // Opera 12.1-, Firefox 20+
+}
+
+// @param value : horizontal | vertical | inherit
+//
+// @see http://www.w3.org/TR/css3-flexbox/
+// @see http://www.html5rocks.com/en/tutorials/flexbox/quick/
+
+box-orient(value)
+  -webkit-box-orient: value
+  -moz-box-orient: value
+  -ms-box-orient: value
+  -o-box-orient: value
+  box-orient: value
+
+
+// @param value : start | end | center | justify
+//
+// @see http://www.w3.org/TR/css3-flexbox/
+// @see http://www.html5rocks.com/en/tutorials/flexbox/quick/
+
+box-pack(value)
+  display-box()
+
+  -webkit-box-pack: value
+  -moz-box-pack: value
+  -ms-box-pack: value
+  -o-box-pack: value
+  box-pack: value
+
+
+// @param value : start | end | center | baseline | stretch
+//
+// @see http://www.w3.org/TR/css3-flexbox/
+// @see http://www.html5rocks.com/en/tutorials/flexbox/quick/
+
+box-align(value)
+  display-box()
+
+  -webkit-box-align: value
+  -moz-box-align: value
+  -ms-box-align: value
+  -o-box-align: value
+  box-align: value
+
+// @param value : 0 | Integer
+//
+// @see http://www.w3.org/TR/css3-flexbox/
+// @see http://www.html5rocks.com/en/tutorials/flexbox/quick/
+
+box-flex(value)
+  display-box()
+
+  -webkit-box-flex: value
+  -moz-box-flex: value
+  -ms-box-flex: value
+  -o-box-flex: value
+  box-flex: value
+
+// @param value : content-box | padding-box | border-box | inherit
+// @see http://www.w3.org/TR/css3-ui/#box-sizing
+
+box-sizing(value)
+  -webkit-box-sizing: value
+  -moz-box-sizing: value
+  box-sizing: value
+
+overflow-scroll()
+  -webkit-overflow-scrolling: touch
+  overflow: scroll
+scroll-vertical()
+  -webkit-overflow-scrolling: touch
+  overflow-y: scroll
+
+scroll-horizontal()
+  -webkit-overflow-scrolling: touch
+  overflow-x: scroll
+
+// @param value : none | text | toggle | element | elements | all | inherit
+// @see http://www.w3.org/TR/2000/WD-css3-userint-20000216#user-select
+
+user-select(value)
+  -webkit-touch-callout: value
+  -webkit-user-select: value
+  -moz-user-select: value
+  -ms-user-select: value
+  -o-user-select: value
+  user-select: value
+
+// @param value : button | push-button | hyperlink  radio-button | checkbox |
+//                pop-up-menu | list-menu | radio-group | checkbox-group |
+//                field | password | normal | inherit | none
+//
+// @see http://www.w3.org/TR/css3-ui/#appearance
+// @see http://www.cssportal.com/css-properties/appearance.htm
+// @see https://developer.mozilla.org/en/CSS/-moz-appearance
+appearance(value)
+  -webkit-appearance: value
+  -moz-appearance: value
+  -ms-appearance: value
+  -o-appearance: value
+  appearance: value
+
+// @param top-left-radius     : px, em, %
+// @param top-right-radius    : px, em, %
+// @param bottom-right-radius : px, em, %
+// @param bottom-left-radius  : px, em, %
+//
+// @see http://www.w3.org/TR/css3-background/#border-radius
+border-radius(value)
+  -webkit-border-radius: value
+  -moz-border-radius: value
+  border-radius: value
+  -webkit-background-clip: padding-box
+  -moz-background-clip: padding
+  background-clip: padding-box
+
+
+border-top-left-radius(value)
+  -webkit-border-top-left-radius: value
+  -moz-border-radius-topleft: value
+  -ms-border-top-left-radius: value
+  -o-border-top-left-radius: value
+  border-top-left-radius: value
+
+border-top-right-radius(value)
+  -webkit-border-top-right-radius: value
+  -moz-border-radius-topright: value
+  -ms-border-top-right-radius: value
+  -o-border-top-right-radius: value
+  border-top-right-radius: value
+
+
+border-bottom-left-radius(value)
+  -webkit-border-bottom-left-radius: value
+  -moz-border-radius-bottomleft: value
+  -ms-border-bottom-left-radius: value
+  -o-border-bottom-left-radius: value
+  border-bottom-left-radius: value
+
+
+border-bottom-right-radius(value)
+  -webkit-border-bottom-right-radius: value
+  -moz-border-radius-bottomright: value
+  -ms-border-bottom-right-radius: value
+  -o-border-bottom-right-radius: value
+  border-bottom-right-radius: value
+
+
+box-shadow(value)
+  -webkit-box-shadow: value
+  -moz-box-shadow: value
+  box-shadow: value
+
+
+// @param colour            : #000, rgba, hsla
+// @param horizontal-offset : px, em
+// @param vertical-offset   : px, em
+// @param blur-radius       : px, em
+//
+// @see http://www.w3.org/TR/css3-text/#text-shadow
+text-shadow(value)
+  text-shadow: value
+
+backgrounds(value)
+  background value
+  background-color value
+
+
+// @param angle   : top, left, 90deg
+// @param colourA : #000 0%, red 0%
+// @param colourB : #000 50%, red 50%
+// @param colourC : #000 100%, red 100%
+//
+// @example background-linear-gradient("top, crimson 0%, black 100%");
+//
+// @see http://dev.w3.org/csswg/css3-images/#linear-gradients
+background-linear-gradient(value) {
+  background-image: -webkit-linear-gradient(value)
+/* @alternate */
+  background-image: -moz-linear-gradient(value)
+/* @alternate */
+  background-image: -ms-linear-gradient(value)
+/* @alternate */
+  background-image: -o-linear-gradient(value)
+/* @alternate */
+  background-image: linear-gradient(value)
+}
+
+gradient-striped(color=rgba(255, 255, 255, 0.15), angle=45deg)
+  background-image: -webkit-linear-gradient(angle, color 25%, transparent 25%, transparent 50%, color 50%, color 75%, transparent 75%, transparent)
+  background-image: linear-gradient(angle, color 25%, transparent 25%, transparent 50%, color 50%, color 75%, transparent 75%, transparent)
+
+// @param location : left top, 50% 50%
+// @param shape    : circle, ellipse, 100% 75%
+// @param colourA  : #000 0%, red 0%
+// @param colourB  : #000 50%, red 50%
+// @param colourC  : #000 100%, red 100%
+//
+// @example background-radial-gradient("50% 50%, circle, crimson 0%, black 100%");
+//
+// @see http://dev.w3.org/csswg/css3-images/#radial-gradients
+background-radial-gradient(value){
+  background-image: -webkit-radial-gradient(value)
+/* @alternate */
+  background-image: -moz-radial-gradient(value)
+/* @alternate */
+  background-image: -ms-radial-gradient(value)
+/* @alternate */
+  background-image: -o-radial-gradient(value)
+/* @alternate */
+  background-image: radial-gradient(value)
+}
+
+
+// @param functions : matrix(), translate(), scale(), rotate(), skew()
+//
+// @see http://www.w3.org/TR/css3-2d-transforms/
+transform(value)
+  -webkit-transform: value
+  -moz-transform: value
+  -ms-transform: value
+  -o-transform: value
+  transform: value
+
+
+// @param value : left | center | right | px | em | %
+//
+// @see http://www.w3.org/TR/css3-3d-transforms/#transform-origin-property
+transform-origin(value)
+  -webkit-transform-origin: value
+  -moz-transform-origin: value
+  -ms-transform-origin: value
+  -o-transform-origin: value
+  transform-origin: value
+
+
+// @param value : preserve-3d | flat
+//
+// @see http://www.w3.org/TR/css3-3d-transforms/#transform-style-property
+transform-style(value)
+  -webkit-transform-style: value
+  -moz-transform-style: value
+  -ms-transform-style: value
+  -o-transform-style: value
+  transform-style: value
+
+
+// @param value : none | 0, 1, 100, 1000, etc
+//
+// @see http://www.w3.org/TR/css3-3d-transforms/#perspective-property
+perspective(value)
+  -webkit-perspective: value
+  -moz-perspective: value
+  -ms-perspective: value
+  -o-perspective: value
+  perspective: value
+
+
+// @param value: left | center | right | px | em | %
+//
+// @see http://www.w3.org/TR/css3-3d-transforms/#perspective-origin-property
+perspective-origin(value)
+  -webkit-perspective-origin: value
+  -moz-perspective-origin: value
+  -ms-perspective-origin: value
+  -o-perspective-origin: value
+  perspective-origin: value
+
+
+// @param value :  visible | hidden
+//
+// @see http://www.w3.org/TR/css3-3d-transforms/#backface-visibility-property
+backface-visibility(value)
+  -webkit-backface-visibility: value
+  -moz-backface-visibility: value
+  -ms-backface-visibility: value
+  -o-backface-visibility: value
+  backface-visibility: value
+
+
+// @param a : Number
+// @param b : Number
+// @param c : Number
+// @param d : Number
+// @param e : Number
+// @param f : Number
+//
+// @see http://www.w3.org/TR/css3-3d-transforms/#transform-functions
+matrix(value)
+  -webkit-transform: matrix(value)
+  -moz-transform: matrix(value)
+  -ms-transform: matrix(value)
+  -o-transform: matrix(value)
+  transform: matrix(value)
+
+
+// @param translate-x : px
+// @param translate-y : px
+//
+// http://www.w3.org/TR/css3-3d-transforms/#transform-functions
+transform-translate(value)
+  -webkit-transform: translate(value)
+  -moz-transform: translate(value)
+  -ms-transform: translate(value)
+  -o-transform: translate(value)
+  transform: translate(value)
+
+
+transform-translate3d(value)
+  -webkit-transform: translate3d(value)
+  -moz-transform: translate3d(value)
+  -ms-transform: translate3d(value)
+  -o-transform: translate3d(value)
+  transform: translate3d(value)
+
+
+// @param scale-x :  0.5, 2, etc
+// @param scale-y :  0.5, 2, etc
+//
+// @see http://www.w3.org/TR/css3-3d-transforms/#transform-functions
+transform-scale(value)
+  -webkit-transform: scale(value)
+  -moz-transform: scale(value)
+  -ms-transform: scale(value)
+  -o-transform: scale(value)
+  transform: scale(value)
+
+
+// @param angle : 0deg
+//
+// @see http://www.w3.org/TR/css3-3d-transforms/#transform-functions
+transform-rotate(value)
+  -webkit-transform: rotate(value)
+  -moz-transform: rotate(value)
+  -ms-transform: rotate(value)
+  -o-transform: rotate(value)
+  transform: rotate(value)
+
+
+// @param axis-x : 0deg
+// @param axis-y : 0deg
+//
+// @see http://www.w3.org/TR/css3-3d-transforms/#transform-functions
+skew(value)
+  -webkit-transform: skew(value)
+  -moz-transform: skew(value)
+  -ms-transform: skew(value)
+  -o-transform: skew(value)
+  transform: skew(value)
+
+
+// @param properties : all, left, opacity, etc
+// @param duration   :  1s, 1000ms
+// @param delay      :  1s, 1000ms
+// @param easing     :  linear, ease-in-out, etc
+//
+// @see http://www.w3.org/TR/css3-transitions/
+transition(value)
+  -webkit-transition: value
+  -moz-transition: value
+  -ms-transition: value
+  -o-transition: value
+  transition: value
+
+animation(animation)
+  -webkit-animation animation
+  animation animation
+
+animate(name = fadeIn, duration = 1s, delay = .2s, function = ease, mode = both)
+  -moz-animation: name duration delay function mode
+  -webkit-animation: name duration delay function mode
+  animation: name duration delay function mode
+
+
+animate-delay(delay = .0s)
+  -moz-animation-delay: delay
+  -webkit-animation-delay: delay
+  -ms-animation-delay: delay
+  -o-animation-delay: delay
+  animation-delay: delay
+
+
+animate-duration(duration = 1s)
+  -moz-animation-duration: duration
+  -webkit-animation-duration: duration
+  -ms-animation-duration: duration
+  -o-animation-duration: duration
+  animation-delay: duration
+
+
+@-webkit-keyframes preloader
+  0%
+  25%
+    transform-scale(1.1)
+  50%
+    transform-scale(1.2)
+  75%
+    transform-scale(1.1)
+
+@-moz-keyframes preloader
+  0%
+  25%
+    transform-scale(1.1)
+  50%
+    transform-scale(1.2)
+  75%
+    transform-scale(1.1)
+
+
+@-o-keyframes preloader
+  0%
+  25%
+    transform-scale(1.1)
+  50%
+    transform-scale(1.2)
+  75%
+    transform-scale(1.1)
+
+
+@keyframes preloader
+  0%
+  25%
+    transform-scale(1.1)
+  50%
+    transform-scale(1.2)
+  75%
+    transform-scale(1.1)
+
+
+// flexbox compatibilities!
+// see http://css-tricks.com/using-flexbox/
+
+
+
+flex-direction(dir) {
+  // convert to the older rule names
+  if dir is row {
+    old-dir = horizontal;
+  } else if dir is column {
+    old-dir = vertical;
+  } else {
+    // row-reverse and column-reverse don't have
+    // equivalents in the old syntax, so we just
+    // pass them through to fail
+    old-dir = dir;
+  }
+
+  -webkit-box-orient: old-dir;    // iOS 6-, Safari 3.1-6
+  -moz-box-orient: old-dir;       // Firefox 19-
+  -ms-flex-direction: dir;        // IE 10
+  -webkit-flex-direction: dir;    // Chrome
+  flex-direction: dir;            // Opera 12.1, Firefox 20+
+}
+
+align-items(align) {
+  // convert to the older rule names
+  if align is flex-start {
+    old-align = start;
+  } else if align is flex-end {
+    old-align = end;
+  } else {
+    // center and stretch are the same in all implementations
+    // baseline is supported in the middle syntax
+    old-align = align;
+  }
+
+  -webkit-box-align: old-align;   // iOS 6-, Safari 3.1-6
+  -moz-box-align: old-align;      // Firefox 19-
+  -ms-flex-align: old-align;      // IE 10
+  -webkit-align-items: align;     // Chrome
+  align-items: align;             // Opera 12.1, Firefox 20+
+}
+
+align-content(val)
+  if val is flex-start {
+
+    val-old = start
+  } else if val is flex-end {
+
+    val-old = end
+
+  } else {
+    val-old = val
+  }
+
+  -webkit-align-content: val
+  -ms-flex-line-pack: val-old
+  align-content: val
+
+justify-content(align) {
+  // convert to the older rule names
+  if align is flex-start {
+    old-align = start;
+  } else if align is flex-end {
+    old-align = end;
+  } else if align is space-between {
+    old-align = justify;
+  } else {
+    // center is the same in all implementations
+    // space-around is only in the new syntax
+    old-align = align;
+  }
+
+  -webkit-box-pack : old-align;   // iOS 6-, Safari 3.1-6
+  -moz-box-pack : old-align;      // Firefox 19-
+  -ms-flex-pack: old-align;       // IE 10
+  -webkit-justify-content: align; // Chrome
+  justify-content: align;         // Opera 12.1, Firefox 20+
+}
+
+
+// these operate on the contained elements
+flex-element(n) {
+  -webkit-box-flex: n;            // iOS 6-, Safari 3.1-6
+  -mox-box-flex: n;               // Firefox 19-
+  -ms-flex: n;                    // IE 10
+  -webkit-flex: n;                // Chrome
+  flex: n;                        // Opera 12.1, Firefox 20+
+}
+
+flex-order(n) {
+  -webkit-box-ordinal-group: n;   // iOS 6-, Safari 3.1-6
+  -moz-box-ordinal-group: n;      // Firefox 19-
+  -ms-flex-order: n;              // IE 10
+  -webkit-order: n;               // Chrome
+  order: n;                       // Opera 12.1, Firefox 20+
+}
+
+flex-wrap(val)
+  -webkit-flex-wrap: val;
+  -ms-flex-wrap: val;
+  flex-wrap: val;
+
+
+align-self(val)
+
+  if val is flex-start
+    old-val = start
+  else if val is flex-end
+    old-val is end
+  else
+    old-val = val
+
+  -webkit-align-self: val;
+  -ms-flex-item-align: val;
+  align-self: val;
+
+
+
+flex-default-row()
+  box-sizing(border-box)
+  flex-container()
+  flex-direction(row)
+  align-items(flex-start)
+  align-content(flex-start)
+  justify-content(flex-start)
+
+flex-default-row-wrap()
+  flex-default-row()
+  flex-wrap(wrap)
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+
+flex-default-column()
+  box-sizing(border-box)
+  flex-container()
+  flex-direction(column)
+  align-items(flex-start)
+  align-content(flex-start)
+  justify-content(flex-start)
+
+flex-default-column-wrap()
+  flex-default-column()
+  flex-wrap(wrap)
+  -webkit-flex-flow column wrap
+  -flex-flow column wrap
+
+
+make-gutters()
+  &.gutters-small
+    margin-left -5px
+    margin-right -5px
+
+  &.gutters-medium
+    margin-left -8px
+    margin-right -8px
+
+  &.gutters-large
+    margin-left -15px
+    margin-right -15px
+
+use-gutters()
+  make-gutters();
+
+  &.gutters
+    margin-left -10px
+    margin-right -10px
+
+add-gutters()
+  margin-left -10px
+  margin-right -10px
+
+  make-gutters()
+  &.no-gutters
+    margin-left 0
+    margin-right 0
+
+add-pads()
+
+  padding-left 10px
+  padding-right 10px
+
+
+
+break-xs()
+  @media( min-width $breakpoint-xs )
+    block
+break-sm()
+  @media( min-width $breakpoint-sm )
+    block
+break-md()
+  @media( min-width $breakpoint-md )
+    block
+break-lg()
+  @media( min-width $breakpoint-lg )
+    block
+break-xl()
+  @media( min-width $breakpoint-xl )
+    block
+break-at(size)
+  if size is xs
+    @media( min-width $breakpoint-xs )
+      block
+  if size is sm
+    @media( min-width $breakpoint-sm )
+      block
+  if size is md
+    @media( min-width $breakpoint-md )
+      block
+  if size is lg
+    @media( min-width $breakpoint-lg )
+      block
+  if size is xl
+    @media( min-width $breakpoint-xl )
+      block
+
+
+
+shadow-0-2-4()
+  box-shadow(0px 2px 4px rgba(0,0,0,.1))
+
