@@ -58,7 +58,8 @@ jQuery(document).ready(function() {
                 marginTop:'0',
                 width:'250px',
                 height:'10px'}, 4.5)
-            .to($inner, 1, {autoAlpha:0}, 5);
+            .to($inner, 1, {autoAlpha:0}, 5)
+            .to($intro, 0, {display:'none'});
     }
 
     function navigation() {
