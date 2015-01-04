@@ -11,7 +11,7 @@
     <!-- endinject -->
 
     <!-- inject:css -->
-    <link rel="stylesheet" href="/content/all.min-fc338606.css">
+    <link rel="stylesheet" href="/content/all.min-6876b2b8.css">
     <!-- endinject -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -24,6 +24,9 @@
   <body ng-controller="AppController as app">
 
     <div class="io-background">
+    </div>
+    <div class="intro">
+        <div class="intro-inner white z-depth-3"><h1 class="red-text text-accent-2">Welcome</h1></div>
     </div>
     <div class="io-site">
         <div class="io-nav">
@@ -58,6 +61,10 @@
                         <i class="mdi-av-equalizer blue-text accent-2"></i>
                         <div class="io-navigation-item-text grey-text darken-1">Skills</div>
                     </a>
+                    <a href="#section-5" du-smooth-scroll du-scrollspy ng-click="app.toSection2()" class="io-navigation-item waves-effect">
+                        <i class="mdi-social-school amber-text darken-3"></i>
+                        <div class="io-navigation-item-text grey-text darken-1">Education</div>
+                    </a>
                     <!-- <div href="#section-5" du-smooth-scroll du-scrollspy class="io-navigation-item waves-effect">
                         <i class="mdi-communication-call amber-text darken-3"></i>
                         <div class="io-navigation-item-text grey-text darken-1">Contact</div>
@@ -81,13 +88,16 @@
                 <div class="io-section" data-ng-include="'app/templates/experience/hackreactor.view.html'"></div>
                 <div class="io-section" data-ng-include="'app/templates/experience/hourglass-events.view.html'"></div>
                 <div class="io-section" data-ng-include="'app/templates/experience/his-coatings.view.html'"></div>
+                <div class="io-section" data-ng-include="'app/templates/experience/designer.view.html'"></div>
                 <div class="io-section" data-ng-include="'app/templates/experience/dfw-print.view.html'"></div>
+                <div class="io-section" data-ng-include="'app/templates/experience/photography.view.html'"></div>
                 <div class="io-section" data-ng-include="'app/templates/experience/his-coatings-relations.view.html'"></div>
             </div>
             <div class="io-content" id="section-3">
                 <div class="col s12 io-content-header red accent-2">
                     <h1 class="white-text">Projects</h1>
                 </div>
+                <div class="io-section" data-ng-include="'app/templates/projects/mvvm.view.html'"></div>
                 <div class="io-section" data-ng-include="'app/templates/projects/slushy.view.html'"></div>
                 <div class="io-section" data-ng-include="'app/templates/projects/plateful.view.html'"></div>
                 <div class="io-section" data-ng-include="'app/templates/projects/TraCom.view.html'"></div>
@@ -98,6 +108,14 @@
                 </div>
                 <div class="io-section has-cards" data-ng-include="'app/templates/skill-set.view.html'"></div>
             </div>
+            <div class="io-content" id="section-5">
+                <div class="col s12 io-content-header red accent-2">
+                    <h1 class="white-text">Education</h1>
+                </div>
+                <div class="io-section has-cards" data-ng-include="'app/templates/education/hackreactor.view.html'"></div>
+                <div class="io-section has-cards" data-ng-include="'app/templates/education/swbts.view.html'"></div>
+                <div class="io-section has-cards" data-ng-include="'app/templates/education/uco.view.html'"></div>
+            </div>
         </div>
     </div>
 
@@ -106,7 +124,7 @@
     <!-- endinject -->
 
     <!-- inject:js -->
-    <script src="/all.min-2a32303f.js"></script>
+    <script src="/all.min-a93865f6.js"></script>
     <!-- endinject -->
     <script>
     </script>

@@ -4,6 +4,9 @@ jQuery(document).ready(function() {
     'use strict';
 
     var $nav        = $('.io-nav'),
+    $intro     = $('.intro'),
+    $inner     = $('.intro-inner'),
+    $introTitle = $intro.find('h1'),
     $navInner  = $('.io-nav-inner'),
     $navHeader = $navInner.find('.io-nav-header'),
     $userIcon  = $('.userIcon'),
@@ -22,7 +25,8 @@ jQuery(document).ready(function() {
     var time = new TimelineLite();
 
     time
-        .to($nav, 0, {autoAlpha:1})
+        .add(title)
+        .to($nav, 0, {autoAlpha:1, delay:4.7})
         .from($nav, 1, {y:'-100%', delay:1}) // 1 sec
         .from($navInner, 0.5, {x: '-100%'})
         .from($navHeader, 1, {width:0}, 1)
@@ -33,14 +37,28 @@ jQuery(document).ready(function() {
         .staggerFrom($navigationIcon, 0.5, {rotation:'270deg', autoAlpha:0}, 0.1)
         .from($navigationText, 0.5, {autoAlpha:0, marginLeft:'-20px'})
         .from($navigationActive, 0.5, {background:'rgba(0,0,0,0)'})
-        .from($content, 1, {x:100, autoAlpha:0}, 4);
+        .from($content, 1, {x:100, autoAlpha:0}, 6);
 
     function title() {
         var tl = new TimelineLite();
-        return tl
-            .from($title1, 0.5, {width: '0px', height: '0px', borderRadius:'100%', ease:Cubic.easeIn, delay:1})
-            .from($title1.find('span'), 1, {autoAlpha:0})
-            .to($title, 0.5, {autoAlpha:0}, 3);
+        tl
+            .to($inner, 1, {width:'200px',
+                height:'200px',
+                marginLeft: '-100px',
+                marginTop: '-100px',
+                delay:0.5})
+            .to($inner, 1, {borderRadius:'0px'}, 1)
+            .to($inner, 1, {width:'400px', marginLeft:'-200px'}, 1.5)
+            .to($introTitle, 1, {autoAlpha:1}, 1.7)
+            .to($introTitle, 1, {autoAlpha:0, delay:1})
+            .to($inner, 1, {rotation:'360deg',
+                left:'0px',
+                top:'0px',
+                marginLeft:'0',
+                marginTop:'0',
+                width:'250px',
+                height:'10px'}, 4.5)
+            .to($inner, 1, {autoAlpha:0}, 5);
     }
 
     function navigation() {
