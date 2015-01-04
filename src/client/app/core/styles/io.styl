@@ -1,0 +1,279 @@
+$color-primary = black
+$shadow-small = 0px 2px 4px rgba(0,0,0,.2)
+
+
+center-flex(values, justify=center, align=center)
+  flex-container()
+  flex-element(values)
+  justify-content(justify)
+  align-items(align)
+
+blockquote
+  border-color lightgrey
+  margin 0
+  center-flex(1 0 auto)
+  .b-icon
+    flex-element(0 0 50px)
+  .b-text
+    flex-element(1 0 auto)
+
+.io-background
+  background-image url('./images/bg-2.jpg')
+  background-position center top
+  background-size cover
+  // -webkit-filter blur(10px)
+  // -ms-filter blur(10px)
+  // filter blur(10px)
+  flex-element(1 0 auto)
+  min-height 100%
+  min-width 100%
+  position absolute
+  z-index 1
+
+.io-site
+  flex-container()
+  background-color rgba(255,255,255,.9)
+  position relative
+  min-height:100%
+  min-width:100%
+  height 100%
+  width 100%
+  z-index 2
+  .container
+    margin 0
+
+@import 'io-nav'
+
+.io-container
+  flex-container()
+  flex-direction(column)
+  // flex-wrap(nowrap)
+  height 100%
+  min-height 100%
+  width 100%
+  scroll-vertical()
+
+
+.io-content
+  flex-element(1 0 auto)
+  flex-direction(column)
+  flex-container()
+  position relative
+  // margin-top 84px
+  min-height 100%
+  z-index 2
+  max-width 100%
+
+
+.io-content-header
+  box-shadow($shadow-small)
+  padding-top 100px
+  max-height 250px
+  min-height 250px
+  width 100%
+  padding-left 50px
+
+// @media(min-width 768px)
+
+
+.io-section
+  flex-direction(column)
+  flex-container()
+  padding 20px
+
+@media(min-width 768px) {
+  .io-section {
+    padding-left: 50px;
+  }
+}
+
+
+.io-section-heading
+  align-items(center)
+  flex-element(1 0 auto)
+  position relative
+  display none
+
+.io-section-heading-xs
+
+  flex-container()
+  flex-direction(column)
+
+@media(min-width 620px)
+  .io-section-heading-xs
+    // display none
+  .io-section-heading
+    flex-container()
+
+
+.io-section-heading-top
+  align-items(center)
+  flex-container()
+
+.io-section-heading-bottom
+  flex-container()
+  align-items(center)
+  justify-content(flex-end)
+
+
+.section-date
+  font-size 1.6em
+  font-weight 700
+  flex-element(1 0 auto)
+  flex-container()
+  justify-content(flex-end)
+
+.section-logo
+  margin-right 20px
+
+.section-title
+  padding-right 20px
+  border-right 1px solid lightgrey
+  font-size 2rem
+  font-weight 700
+
+.section-subtitle
+  padding-left 20px
+  font-weight 500
+  &.no-xs
+    display none
+
+
+.io-section-content
+  border-bottom 1px solid lightgrey
+
+  ul
+    list-style none
+    li
+      margin-bottom 20px
+      span
+        display table-cell
+        padding-left 10px
+        font-weight 500
+
+      i
+        display table-cell
+        font-size 10px
+
+.io-section.has-cards
+  padding 20px
+
+.io-section-card
+  flex-container()
+  flex-direction(column)
+  flex-element(1 0 auto)
+  box-shadow($shadow-small)
+  width 100%
+  background-color white
+  margin-bottom 20px
+
+  .io-section-card-heading
+    padding-left 20px
+    padding-top 10px
+    width 100%
+    min-height 48px
+    max-height 48px
+    font-weight 700px
+    font-size 2rem
+    font-weight 700
+    color #757575
+    flex-element(0 0 48px)
+    border-bottom 1px solid #dddddd
+
+.io-section-logos
+  flex-container()
+  flex-direction(row)
+  flex-element(1 0 auto)
+  align-items(flex-start)
+  justify-content(center)
+  flex-wrap(wrap)
+  overflow-x hidden
+  margin-bottom 40px
+  width 100%
+  padding 20px
+
+
+.img-wrap
+  position relative
+  flex-element(0 0 33.33333%)
+  align-self(stretch)
+  align-items(center)
+  justify-content(center)
+  text-align center
+  padding-bottom 40px
+  margin-bottom 20px
+  h6
+    position absolute
+    width 100%
+    text-align center
+    font-weight 700
+    font-size 1.2rem
+    color #757575 !important
+    bottom 0
+    // align-self(flex-end)
+  img
+    display block
+    margin 0 auto
+    max-width 100px
+    max-height 100px
+    &.top-sm
+      margin-top 10px
+    &.top-md
+      margin-top 20px
+    &.top-lg
+      margin-top 30px
+
+@media(min-width 768px)
+  .img-wrap
+    flex-element(0 0 25%)
+
+@media(min-width 900px)
+  .img-wrap
+    flex-element(0 0 20%)
+
+@media(min-width 1000px)
+  .img-wrap
+    flex-element(0 0 16.66667%)
+
+
+.io-profile
+  justify-content(center)
+
+  .io-profile-header
+    flex-element(1)
+    flex-container()
+    width 100%
+    padding-left 50px
+    max-height 120px
+
+  .io-profile-details
+    width 100%
+    padding-left 50px
+
+
+
+
+
+@media only screen and (max-width 460px) and (min-width 0px)
+
+  blockquote
+    font-size 12px
+
+  .io-content-header
+    padding-left 20px
+    & > h1
+      font-size 2.5rem
+
+  .section-title,
+  .section-date
+    font-size 1rem
+
+
+  .io-profile
+    .io-profile-header
+      padding-left 20px
+    .io-profile-details
+      padding-left 20px
+
+  .img-wrap
+    flex-element(0 0 50%)

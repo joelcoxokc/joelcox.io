@@ -1,0 +1,57 @@
+{
+  "name": "mvvm-demo",
+  "version": "0.0.1",
+  "description": "AngularJS Modular Demo",
+  "authors": [
+    "JoelCox"
+  ],
+  "license": "MIT",
+  "homepage": "http://mvvm.azurewebsites.net",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular-mocks": "~1.3.8"
+  },
+  "dependencies": {
+    "angular": "~1.3.8",
+    "toastr": "~2.0.1",
+    "moment": "~2.6.0",
+    "jquery": "~2.1.0",
+    "angular-route": "~1.3.8",
+    "angular-animate": "~1.3.8",
+    "angular-sanitize": "~1.3.8",
+    "font-awesome": "~4.0.3",
+    "extras.angular.plus": "~0.9.0",
+    "materialize": "~0.94.0",
+    "gsap": "~1.15.0",
+    "angular-ui-router": "~0.2.13",
+    "lodash": "~2.4.1",
+    "angular-scroll": "~0.6.4"
+  },
+  "overrides": {
+    "font-awesome": {
+      "main": "css/font-awesome.css"
+    },
+    "materialize": {
+      "main": [
+        "dist/css/materialize.css",
+        "dist/js/materialize.js",
+        "font/material-design-icons/Material-Design-Icons.eot",
+        "font/material-design-icons/Material-Design-Icons.svg",
+        "font/material-design-icons/Material-Design-Icons.ttf",
+        "font/material-design-icons/Material-Design-Icons.woff",
+        "font/roboto/Roboto-Bold.ttf",
+        "font/roboto/Roboto-Light.ttf",
+        "font/roboto/Roboto-Medium.ttf",
+        "font/roboto/Roboto-Regular.ttf",
+        "font/roboto/Roboto-Thin.ttf"
+      ]
+    }
+  },
+  "main": "gulpfile.js"
+}
