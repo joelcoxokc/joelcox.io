@@ -1,20 +1,20 @@
 {
   "mvvm": {
-    "name": "mvvm-demo",
+    "name": "joelcox.io",
     "version": "0.1.0",
     "description": "",
     "author": "joelcoxokc",
     "username": "joelcoxokc",
     "email": "joelcox@hisimagination.com",
-    "id": 22,
-    "created": 1420367759050,
-    "local_path": "/Users/joelcox/.mvvm-store/mvvm-demo",
-    "updated": 1420367759050,
+    "id": 23,
+    "created": 1420435734926,
+    "local_path": "/Users/joelcox/.mvvm-store/joelcox.io",
+    "updated": 1420435734926,
     "serverDir": "./src/server",
     "clientDir": "./src/client",
     "appDir": "./src/client/app",
-    "coreDir": "./src/client/app/core",
+    "coreDir": "./src/client/app",
     "modulesDir": "./src/client/app/modules",
-    "cwd": "/Users/joelcox/dev/temp/mvvm_demo"
+    "cwd": "/Users/joelcox/dev/site/joelcox.io"
   }
 }
